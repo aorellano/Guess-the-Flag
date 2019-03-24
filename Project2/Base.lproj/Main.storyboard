@@ -20,6 +20,9 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vpi-eU-BXj">
                                 <rect key="frame" x="87.5" y="144" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vpi-eU-BXj" secondAttribute="height" multiplier="2:1" id="FQ5-7B-sxp"/>
+                                </constraints>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ip0-68-FOs"/>
@@ -27,6 +30,9 @@
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rCE-1D-CZG">
                                 <rect key="frame" x="87.5" y="274" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rCE-1D-CZG" secondAttribute="height" multiplier="2:1" id="9Ld-JL-jVu"/>
+                                </constraints>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="isR-gY-xA2"/>
@@ -34,6 +40,9 @@
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8Y-bo-f7w">
                                 <rect key="frame" x="87.5" y="404" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="b8Y-bo-f7w" secondAttribute="height" multiplier="2:1" id="UcR-qO-DOc"/>
+                                </constraints>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4e5-Hs-VBv"/>
@@ -42,10 +51,13 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="b8Y-bo-f7w" secondAttribute="bottom" constant="20" id="EWT-Kj-Ggh"/>
+                            <constraint firstItem="vpi-eU-BXj" firstAttribute="height" secondItem="rCE-1D-CZG" secondAttribute="height" id="KLk-fq-uCm"/>
                             <constraint firstItem="b8Y-bo-f7w" firstAttribute="centerX" secondItem="rCE-1D-CZG" secondAttribute="centerX" id="PRI-x3-Zn5"/>
                             <constraint firstItem="rCE-1D-CZG" firstAttribute="centerX" secondItem="vpi-eU-BXj" secondAttribute="centerX" id="TY2-1I-SXR"/>
                             <constraint firstItem="rCE-1D-CZG" firstAttribute="top" secondItem="vpi-eU-BXj" secondAttribute="bottom" constant="30" id="UJc-v5-0I0"/>
                             <constraint firstItem="vpi-eU-BXj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="aGO-JA-A3w"/>
+                            <constraint firstItem="rCE-1D-CZG" firstAttribute="height" secondItem="b8Y-bo-f7w" secondAttribute="height" id="enM-Z6-LPX"/>
                             <constraint firstItem="vpi-eU-BXj" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hOG-XM-ptd"/>
                             <constraint firstItem="b8Y-bo-f7w" firstAttribute="top" secondItem="rCE-1D-CZG" secondAttribute="bottom" constant="30" id="hrd-td-7La"/>
                         </constraints>
