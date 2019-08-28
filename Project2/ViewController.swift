@@ -45,20 +45,28 @@ class ViewController: UIViewController {
         }
         questionCtr += 1
     }
-    @IBAction func buttonTapped(_ sender: Any) {
+    @IBAction func buttonTapped(_ button: UIButton) {
         var title: String
         var message: String
-        if (sender as AnyObject).tag == correctAnswer {
+        if (button as AnyObject).tag == correctAnswer {
             score += 1
             title = "Correct"
             message = "Your score is \(score)"
         } else {
             title = "Wrong!"
-            message = "That is the flag of \(countries[(sender as AnyObject).tag].uppercased())"
+            message = "That is the flag of \(countries[(button as AnyObject).tag].uppercased())"
         }
         let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "OK", style: .default, handler: askQuestion))
-        present(ac, animated: true)
+        
+        
+        UIView.animate(withDuration: 0.4, animations: {
+            button.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+        }) { finished in
+            button.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+            self.present(ac, animated: true)
+        }
+        
     }
 }
 
